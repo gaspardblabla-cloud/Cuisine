@@ -1,0 +1,4 @@
+<!-- Dans public/images/cake1.html -->
+<div style="width:300px;height:200px;background:linear-gradient(135deg,#FF6B8B,#FFD166);display:flex;align-items:center;justify-content:center;color:white;font-size:24px;border-radius:10px;">
+Gâteau Basque
+</div>
