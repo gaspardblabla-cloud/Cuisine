@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCakes - Commandez vos gâteaux en ligne</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span>SweetCakes</span>
+                    </div>
+                    
+                    <nav class="nav">
+                        <a href="#" class="nav-link" data-page="home">Accueil</a>
+                        <a href="#" class="nav-link" data-page="cakes">Nos Gâteaux</a>
+                        <div id="auth-section">
+                            <!-- Contenu dynamique pour l'authentification -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Pages principales -->
+        <main class="main-content">
+            <!-- Page d'accueil (déconnecté) -->
+            <div id="home-page" class="page active">
+                <section class="hero">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Des Gâteaux Faits avec Amour</h1>
+                            <p class="hero-subtitle">Découvrez nos créations uniques et réservez votre moment de douceur</p>
+                            <div class="hero-buttons">
+                                <button class="btn btn-primary" data-page="cakes">Voir les gâteaux</button>
+                                <button class="btn btn-secondary" onclick="showAuthModal('signup')">Créer un compte</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Page des gâteaux -->
+            <div id="cakes-page" class="page">
+                <div class="container">
+                    <div class="page-header">
+                        <h2>Nos Délicieux Gâteaux</h2>
+                        <p>Choisissez votre favori et réservez pour une date spéciale</p>
+                    </div>
+                    
+                    <div id="cakes-grid" class="cakes-grid">
+                        <!-- Les gâteaux seront chargés ici -->
+                    </div>
+                    
+                    <div class="load-more-section">
+                        <button id="load-more" class="btn btn-outline">
+                            <i class="fas fa-plus"></i>
+                            Charger plus de gâteaux
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page de réservation -->
+            <div id="reservation-page" class="page">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('cakes')">
+                        <i class="fas fa-arrow-left"></i>
+                        Retour
+                    </button>
+                    
+                    <div id="reservation-content">
+                        <!-- Contenu dynamique de réservation -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page chef -->
+            <div id="chef-page" class="page">
+                <div class="container">
+                    <h2>Gestion du Chef</h2>
+                    <div class="chef-tabs">
+                        <button class="tab-btn active" data-tab="reservations">Réservations</button>
+                        <button class="tab-btn" data-tab="cakes-management">Gérer les gâteaux</button>
+                        <button class="tab-btn" data-tab="suggestions">Suggestions</button>
+                    </div>
+                    
+                    <div id="chef-content">
+                        <!-- Contenu dynamique du chef -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page profil -->
+            <div id="profile-page" class="page">
+                <div class="container">
+                    <div class="profile-content">
+                        <!-- Contenu dynamique du profil -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modals -->
+        <div id="auth-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="auth-forms">
+                    <!-- Forms de connexion/inscription -->
+                </div>
+            </div>
+        </div>
+
+        <div id="suggestion-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Suggérer un gâteau</h3>
+                <form id="suggestion-form">
+                    <input type="text" placeholder="Titre de votre suggestion" required>
+                    <textarea placeholder="Décrivez votre idée de gâteau..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Envoyer la suggestion</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="notifications-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Vos Notifications</h3>
+                <div id="notifications-list">
+                    <!-- Liste des notifications -->
+                </div>
+            </div>
+        </div>
+
+        <div id="chat-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="chat-container">
+                    <!-- Interface de chat -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating action button pour les suggestions -->
+        <button id="suggestion-fab" class="fab">
+            <i class="fas fa-lightbulb"></i>
+        </button>
+
+        <!-- Animation du chat -->
+        <div id="cat-animation" class="cat-hidden">
+            <i class="fas fa-cat"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
