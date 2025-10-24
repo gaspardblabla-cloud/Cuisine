@@ -14,7 +14,12 @@
     "express-session": "^1.17.3",
     "uuid": "^9.0.0"
   },
-  "keywords": ["cake", "order", "pastry", "reservation"],
+  "keywords": [
+    "cake",
+    "order",
+    "pastry",
+    "reservation"
+  ],
   "author": "CakeOrder Team",
   "license": "MIT"
 }
