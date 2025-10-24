@@ -1,0 +1,4 @@
+<!-- Dans public/images/avatar-default.html -->
+<div style="width:100px;height:100px;background:linear-gradient(135deg,#FF6B8B,#A78BFA);display:flex;align-items:center;justify-content:center;color:white;font-size:36px;border-radius:50%;">
+<i class="fas fa-user"></i>
+</div>
