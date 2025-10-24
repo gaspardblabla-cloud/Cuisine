@@ -1,0 +1,4 @@
+<!-- Dans public/images/cake2.html -->
+<div style="width:300px;height:200px;background:linear-gradient(135deg,#A78BFA,#06D6A0);display:flex;align-items:center;justify-content:center;color:white;font-size:24px;border-radius:10px;">
+Clafoutis Poires
+</div>
